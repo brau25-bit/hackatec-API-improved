@@ -1,0 +1,29 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate",
+    "prisma:studio": "prisma studio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@prisma/client": "^6.19.2",
+    "bcrypt": "6.0.0",
+    "cors": "2.8.6",
+    "express": "5.2.1",
+    "express-rate-limit": "8.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.3",
+    "prisma": "^6.19.2"
+  }
+}
