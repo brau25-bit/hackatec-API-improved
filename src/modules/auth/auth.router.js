@@ -6,7 +6,7 @@ import { userSchema, partialUserSchema } from "../../schemas/user.schema.js";
 
 const authRouter = Router()
 
-authRouter.post('/register', loginLimiter, validateSchema(userSchema), AuthController.createUser)
+authRouter.post('/register',  validateSchema(userSchema), AuthController.createUser)
 
 authRouter.post('/login', loginLimiter, validateSchema(partialUserSchema), AuthController)
 
