@@ -8,21 +8,48 @@ export class AuthController{
             const result = await AuthService.createUser(data)
 
             return res.status(201).json({
-                result
+                message: result
             })
         } catch (error) {
-            if(error.message === "fallo-creacion-usuario") return res.status(404).json({message: "Fallo"})
-            
             if(error.message === "credenciales-invalidas") return res.status(400).json({message: "Credenciales invalidas"})
         }
     }
 
     static async login(req, res){
         try {
-            
+            const data = req.validated
+
+            const result = await AuthService.login(data)
+
+            return res.status(200).json({
+                result
+            })
         } catch (error) {
-            
+            return res.status(404).json({message: error.message})
         }
     }
 
+    static async resetPassword(req, res){
+        try {
+            const data = req.validated
+            const result = await AuthService.resetPassword(data)
+            return res.status(200).json({
+                message: "Contraseña restablecida correctamente"
+            })
+        } catch (error) {
+            return res.status(404).json({message: error.message})
+        }
+    }
+
+    static async recoverPassword(req, res){
+        try {
+            const email = req.validated
+
+            await AuthService.recoverPassword(email)
+
+            return res.status(200).json({message: "Codigo generado correctamente"})
+        } catch (error) {
+            return res.status(400).json({message: error.message})
+        }
+    }
 }

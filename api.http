@@ -11,6 +11,30 @@ Content-Type: application/json
     "cp": "13400",
     "state": "CDMX",
     "area": "tlahuac",
-    "profession": "developer",
-    "role": "ADMIN"
+    "profession": "developer"
+}
+
+###
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email": "brauliochveza@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:5000/auth/recover-password
+Content-Type: application/json      
+
+{
+    "email": "brauliochaveza@gmail.com"
+}
+
+POST http://localhost:5000/auth/reset-password
+Content-Type: application/json      
+
+{
+    "email": "brauliochaveza@gmail.com",
+    "password": "123"
 }

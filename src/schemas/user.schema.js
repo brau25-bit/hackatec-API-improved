@@ -31,6 +31,11 @@ export const userSchema = z.object({
         .min(2, "Contraseña debe de comtener al menos 2 caracteres")
         .max(255, "Contraseña demasiada larga"),
 
+    passwordResetCode: z.string()
+        .min(10, "Codigo invalido")
+        .max(10, "Codigo invalido")
+        .optional(),
+
     cp: z.string("Campo debe de ser una cadena de texto")
         .trim()
         .min(5, "Codigo postal demasiado corto")

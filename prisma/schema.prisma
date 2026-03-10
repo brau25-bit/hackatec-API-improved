@@ -29,6 +29,7 @@ model User {
 
   email String @unique
   password String
+  passwordResetCode String?
 
   cp String
   state String
@@ -51,6 +52,8 @@ model Report{
   title String
   description String
   location String
+  longitude Float
+  latitude Float
 
   userId String
   user User @relation(fields: [userId], references: [id])
