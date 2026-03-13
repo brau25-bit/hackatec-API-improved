@@ -89,6 +89,7 @@ export class AuthService{
             throw error
         }
     }
+    
     static async resetPassword(data){
         try {
             const user = await prisma.user.findUnique({
