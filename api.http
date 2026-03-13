@@ -19,7 +19,7 @@ POST http://localhost:5000/auth/login
 Content-Type: application/json
 
 {
-    "email": "brauliochveza@gmail.com",
+    "email": "brauliochaveza@gmail.com",
     "password": "123456"
 }
 
@@ -39,4 +39,17 @@ Content-Type: application/json
     "email": "brauliochaveza@gmail.com",
     "password": "123",
     "passwordResetCode": "[}@=r3o9Oa"
+}
+
+###
+POST http://localhost:5000/report/
+Content-Type: application/json
+
+{
+    "title": "Reporte de prueba",
+    "description": "Este es un reporte de prueba",
+    "location": "CDMX",
+    "longitude": -99.1332,
+    "latitude": 19.4326,
+    "userId": "44bc9b63-49e7-4423-896a-d8553278b56b"
 }
