@@ -31,10 +31,12 @@ Content-Type: application/json
     "email": "brauliochaveza@gmail.com"
 }
 
+###
 POST http://localhost:5000/auth/reset-password
 Content-Type: application/json      
 
 {
     "email": "brauliochaveza@gmail.com",
-    "password": "123"
+    "password": "123",
+    "passwordResetCode": "[}@=r3o9Oa"
 }
